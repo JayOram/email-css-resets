@@ -1,0 +1,13 @@
+/* All resets in this file have been tested to see if they are still needed - check the notes 
+above each section to find out what they did and which email client they affected. */
+
+
+
+/* .ReadMsgBody was an old class for targeting hotmail/outlook.com - this reset is no longer needed (Feb 2021) */
+
+.ReadMsgBody { width: 100%; }
+
+/* .ExternalClass was a class added to target Outlook.com/hotmail previously - this reset is no longer needed (Feb 2021) */
+
+.ExternalClass { ... }
+
