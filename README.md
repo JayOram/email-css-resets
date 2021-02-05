@@ -9,7 +9,7 @@ There are two types of CSS -
 For example: 
 table { border-collapse: collapse; }
 
-With all emails currently needing to include the <table> HTML element, even if only for Outlook, the overall normalisation to collpase table borders will stop gaps appearing between tables and cells. 
+With all emails currently needing to include the table HTML element, even if only for Outlook, the overall normalisation to collpase table borders will stop gaps appearing between tables and cells. 
 
 
 2. Email client specific CSS that will reset/override specific styles an email client will force on HTML elements. 
