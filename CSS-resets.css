@@ -1,18 +1,75 @@
-/*  hotmail/outlook.com fix  */
-.ReadMsgBody {
-        width: 100%;
-      }
-.ExternalClass {
-        width: 100%;
-      }
-      
-/* Fix for Outlook links */
+/* General CSS resets for common email elements */
+
+
+table td {
+        border-collapse: collapse;
+      	}
+
+html, body, p, div {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+      	}
+
+a {
+        text-decoration: none;
+      	}
+  
+img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+      	}
+
+body {
+        margin: 0!important;
+        padding: 0!important;
+        width: 100%!important;
+      	}
+
+
+
+/* Fix for Outlook links color fix for links and visited links */
 
 span.MsoHyperlink {
         color: inherit !important;
         mso-style-priority: 99 !important;
       }
-      span.MsoHyperlinkFollowed {
+
+span.MsoHyperlinkFollowed {
         color: inherit !important;
         mso-style-priority: 99 !important;
       }
+
+/* reset link attributes in Outlook app iOS/Android - to match the parent element */
+
+body[data-outlook-cycle] a {
+        color: inherit !important;
+        text-decoration: none !important;
+}
+
+/* reset link attributes in Apple Mail / iOS Mail apps - to match the parent element */
+
+a[x-apple-data-detectors] {
+        color: inherit!important;
+        text-decoration: none!important;
+        font-size: inherit!important;
+        font-family: inherit!important;
+        font-weight: inherit!important;
+        line-height: inherit!important;
+      	}
+      	
+/* reset link attributes in Gmail - to match the parent element */
+
+u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      	}
+
+/* centre email on Android 4.4 - margin reset */
+
+ div[style*="margin: 16px 0"] {
+        margin: 0!important;
+      	}
