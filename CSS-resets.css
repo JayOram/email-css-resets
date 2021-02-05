@@ -1,1 +1,18 @@
+/*  hotmail/outlook.com fix  */
+.ReadMsgBody {
+        width: 100%;
+      }
+.ExternalClass {
+        width: 100%;
+      }
+      
+/* Fix for Outlook links */
 
+span.MsoHyperlink {
+        color: inherit !important;
+        mso-style-priority: 99 !important;
+      }
+      span.MsoHyperlinkFollowed {
+        color: inherit !important;
+        mso-style-priority: 99 !important;
+      }
