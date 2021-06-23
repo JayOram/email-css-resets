@@ -18,7 +18,6 @@ So I think a “normalise” on <h1>-<h3> would make sense
 h1 {
         margin:0.67em 0;
         font-size:2em;
-        background:red;
 	}
 h2 {
         margin:0.83em 0;
