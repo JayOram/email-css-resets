@@ -5,9 +5,33 @@ above each section to find out what they did and which email client they affecte
 
 /* .ReadMsgBody was an old class for targeting hotmail/outlook.com - this reset is no longer needed (Feb 2021) */
 
-.ReadMsgBody { width: 100%; }
+.ReadMsgBody {
+  width: 100%; 
+  }
 
 /* .ExternalClass was a class added to target Outlook.com/hotmail previously - this reset is no longer needed (Feb 2021) */
 
 .ExternalClass { ... }
 
+/* webkit and ms text-size-adjust were used to allow font sizes under 13px to be used for old footers/navigation.
+Most would now agree a lower limit of 14px for all text so these can now be removed - June 2021 */
+
+* {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  }
+
+/* -ms-interpolation-mode was used for re-sampling images that needed to stretch in the HTML - since IE8 this has been set as bicubic.
+This now only works in IE11 which will be deprecated soon - but also has a default of bicubic. Outlook also has bicubic set as default,
+so no need to specify it any more. */
+
+img {
+  -ms-interpolation-mode: bicubic !important;
+  }
+
+/* Used to fix auto links in outlook app - but an update rolling out since June 14th 2021 has now changed the targeting and this no longer works. */	
+
+body[data-outlook-cycle] a {
+  color: inherit !important;
+  text-decoration: none;
+  }
