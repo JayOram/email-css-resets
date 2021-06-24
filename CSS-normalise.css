@@ -6,7 +6,11 @@ border-collapse to stop spaces between tables caused by border size
 mso-table-lspace / mso-table-rspace to ensure no left and right space is added next to tables - Outlook specific CSS attributes
  */
 
-table { border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; }
+table {
+  border-collapse:collapse;
+  mso-table-lspace:0;
+  mso-table-rspace:0; 
+  }
 
 /* 
 Older versions of Samsung mail reset the font-size on <h1>-<h6> elements - But the newer versions don’t. 
@@ -16,64 +20,70 @@ So I think a “normalise” on <h1>-<h3> would make sense
 */
 
 h1 {
-        margin:0.67em 0;
-        font-size:2em;
-	}
+  margin:0.67em 0;
+  font-size:2em;
+  }
 h2 {
-        margin:0.83em 0;
-        font-size:1.5em;
-	}
+  margin:0.83em 0;
+  font-size:1.5em;
+  }
 
 /* html[dir] h3 is to increase specificity to override Outlook.com */
 html[dir] h3, h3 {
-        margin:1em 0;
-        font-size:1.17em;
-	}
+  margin:1em 0;
+  font-size:1.17em;
+  }
 
 /* From here - all CSS normalisation is based on a specific email client sitution */
 
 /* Fix for Outlook links color fix for links and visited links */
 
 span.MsoHyperlink {
-        color: inherit !important;
-        mso-style-priority: 99 !important;
-      }
+  color: inherit !important;
+  mso-style-priority: 99 !important;
+  }
 
 span.MsoHyperlinkFollowed {
-        color: inherit !important;
-        mso-style-priority: 99 !important;
+  color: inherit !important;
+  mso-style-priority: 99 !important;
       }
-
-/* normalise link attributes in Outlook app iOS/Android - to match the parent element */
-
-body[data-outlook-cycle] a {
-        color: inherit !important;
-        text-decoration: none !important;
-}
 
 /* normalise link attributes in Apple Mail / iOS Mail apps - to match the parent element */
 
 a[x-apple-data-detectors] {
-        color: inherit!important;
-        text-decoration: none!important;
-        font-size: inherit!important;
-        font-family: inherit!important;
-        font-weight: inherit!important;
-        line-height: inherit!important;
-      	}
+  color: inherit!important;
+  text-decoration: none!important;
+  font-size: inherit!important;
+  font-family: inherit!important;
+  font-weight: inherit!important;
+  line-height: inherit!important;
+  }
       	
-/* normalise link attributes in Gmail - to match the parent element */
+/* normalise link attributes in Gmail - to match the parent element. NOTE: Need to add class="body" to the body element and a DOCTYPE must be present. */
 
-u + #body a {
-        color: inherit;
-        text-decoration: none;
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-      	}
+u + .body a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  }
+
+/* Mark Robbins found iOS Gmail will add word-spacing: 1px and word-wrap: break-word 
+https://github.com/JayOram/email-css-resets/issues/2#issue-805476023 
+so added the below to fix that
+
+This doesn't fix GANGA - so may need to be added inline - 
+<body style="word-wrap: normal; word-spacing:normal;">
+*/
+
+.body {
+   word-wrap: normal;
+   word-spacing:normal;
+  }
 
 /* centre email on Android 4.4 - margin reset */
 
  div[style*="margin: 16px 0"] {
-        margin: 0!important;
-      	}
+  margin: 0!important;
+  }
