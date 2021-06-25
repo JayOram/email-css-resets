@@ -1,5 +1,15 @@
 /* General CSS normalisation - investigating common CSS seen in emails */
 
+/* 
+Normalise on all email clients
+Apple Mail, iOS Mail plus many more have preset margin and padding for the email body - this normalises it so rendering is consistent and designers can choose.
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  }
+
 /*  
 Fix for Outlook on Windows
 border-collapse to stop spaces between tables caused by border size 
