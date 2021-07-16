@@ -35,3 +35,8 @@ Two main files -
 <a href="https://github.com/JayOram/email-css-resets/blob/main/CSS-normalise.css"> Current CSS resets/normalisation</a>
 
 I would love anyone to send updates / pull requests with any CSS resets they find in old templates or know of? 
+
+Thanks to <a href="https://github.com/TedGoas">Ted Goas</a> for updating the read me to look much better!
+
+Contributors:
+<a href="https://github.com/M-J-Robbins">Mark Robbins</a>, <a href="https://github.com/hteumeuleu">Rémi Parmentier</a> and hat tip to <a href="https://github.com/cossssmin">Cosmin Popovici</a> who has created <a href="https://github.com/maizzle/email-normalize">email-normalize</a> an npm package to use email normalise and reset CSS in builds. 
