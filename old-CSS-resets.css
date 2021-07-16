@@ -9,9 +9,18 @@ above each section to find out what they did and which email client they affecte
   width: 100%; 
   }
 
-/* .ExternalClass was a class added to target Outlook.com/hotmail previously - this reset is no longer needed (Feb 2021) */
+/* .ExternalClass was a class added to target Outlook.com/hotmail previously - this reset is no longer needed (Feb 2021).
+Added additional common use below to reset line-height - which is also no longer needed (July 2021) */
 
 .ExternalClass { ... }
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
 
 /* webkit and ms text-size-adjust were used to allow font sizes under 13px to be used for old footers/navigation.
 Most would now agree a lower limit of 14px for all text so these can now be removed - June 2021 */
@@ -35,3 +44,52 @@ body[data-outlook-cycle] a {
   color: inherit !important;
   text-decoration: none;
   }
+
+/* Was used to force a 'View in browser' link in Outlook Windows. This no longer works and can be removed - July 2021 (Not worked since approximately 2016) */
+
+#outlook a {
+  padding: 0;
+}
+
+/* .yshortcuts used to be added in Yahoo to link popular names/locations - this is no longer needed (July 2021) */
+
+.yshortcuts,
+.yshortcuts:hover,
+.yshortcuts:active,
+.yshortcuts:focus {
+  background-color: none;
+  border: none;
+  color: #000000;
+  text-decoration:none;
+}
+
+/* .im was used to target Gmail text in conversation threads - this is no longer needed (July 2021) */
+
+.im {
+  color: inherit !important;
+}
+
+/* Used to be the class on Gmail webmail desktop images to download - this no longer works (July 2021) 
+
+Currently this works: 
+u ~ div img + div {display: none;}
+
+*/
+
+.a6S {
+  display: none !important;
+  opacity: 0.01 !important;
+}
+
+/* .aBn used to be the class on auto-links in Gmail, for example an address, phone number or date - this no longer works (July 2021) */
+
+.aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
