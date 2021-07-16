@@ -20,13 +20,16 @@ CSS that will reset/override specific styles an email client will force on HTML 
 
 For example:
 ```
-body[data-outlook-cycle] a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
+u + .body a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  }
 ```
 
-The above CSS targets the Outlook apps on Android and iOS devices which change links to blue and add an underline, without the email developer adding those attributes. This CSS 'reset' sets the color to inherit from the parent element and not to have an underline.
+The above CSS targets link attributes in Gmail - to match the parent element. Gmail will change links to blue and add an underline, without the email developer adding those attributes. This CSS 'reset' sets the color and font attributes to inherit from the parent element and not to have an underline.
 
 
 Two main files - 
