@@ -92,6 +92,16 @@ a[x-apple-data-detectors] {
     }
 ```
 
+*Outlook App iOS*
+
+```
+#root [x-apple-data-detectors=true],
+a[x-apple-data-detectors=true]{
+	color: inherit !important;
+	text-decoration: inherit !important;
+}
+```
+
 *Outlook Windows Desktop app*
 
 ```
