@@ -60,14 +60,11 @@ span.MsoHyperlinkFollowed {
 
 /* normalise link attributes in Apple Mail / iOS Mail apps - to match the parent element */
 
-a[x-apple-data-detectors] {
-  color: inherit!important;
-  text-decoration: none!important;
-  font-size: inherit!important;
-  font-family: inherit!important;
-  font-weight: inherit!important;
-  line-height: inherit!important;
-  }
+#root [x-apple-data-detectors=true],
+a[x-apple-data-detectors=true]{
+	color: inherit !important;
+	text-decoration: inherit !important;
+}
       	
 /* normalise link attributes in Gmail - to match the parent element. NOTE: Need to add class="body" to the body element and a DOCTYPE must be present. */
 
