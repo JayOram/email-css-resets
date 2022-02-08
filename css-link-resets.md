@@ -94,12 +94,29 @@ a[x-apple-data-detectors] {
 
 *Outlook App iOS*
 
+This one is complicated! To overide the specificity for the 'blue' link styling. You need to include two #IDs:
+
 ```
-#root [x-apple-data-detectors=true],
-a[x-apple-data-detectors=true]{
-	color: inherit !important;
-	text-decoration: inherit !important;
+#id1 #id2 a[x-apple-data-detectors]{
+  color: inherit !important;
+  text-decoration: inherit !important;
 }
+```
+
+This could be set up as below:
+
+```
+<body>
+<!-- Whole email container -->
+<div id="id1">
+
+<!-- Parent container -->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" id="id2">
+...email content...
+</table>
+
+</div>
+</body>
 ```
 
 *Outlook Windows Desktop app*
