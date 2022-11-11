@@ -81,6 +81,8 @@ a[x-apple-data-detectors] {
 
 *Samsung Mail*
 
+Note: if you include !important after the below it will remove all styling in the app.
+
 ```
 #MessageViewBody a {
     color: inherit;
