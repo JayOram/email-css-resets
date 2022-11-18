@@ -15,12 +15,12 @@ The below meta tag sets the format detection to ignore, addresses, email, date a
 <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
 ```
 
-The CSS below resets all links to `text-decoration: none;` and using the below we can ensure any anchor tags `<a>` inherit the color. We need to add `!important` so that outlook .com listens to the `color: inherit`. Outlook on Windows Desktop doesn't support `color:inherit;` so we need to set a specific color. 
+The CSS below resets all links to `text-decoration: none;` and using the below we can ensure any anchor tags `<a>` inherit the color. We need to add `!important` so that outlook .com listens to the `color: inherit`. Outlook on Windows Desktop needs `mso-color-alt: windowtext;` to inherit the text color. 
 
 ```
 a {
     color:inherit!important;
-    color:#000;
+    mso-color-alt: windowtext;
     text-decoration: none;
     }
 ```
