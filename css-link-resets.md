@@ -25,7 +25,7 @@ a {
     }
 ```
 
-This is partially why this isn't necessarily a 'reset' as in browsers, all `<a>` have a default of blue and are underlined, in email the behaviour is the same, but styling links in email clients needs `!important` or specific CSS targeting. Having to set a specific color for Outlook Windows on Desktop obviously means styling then needs to happen inline. 
+This is partially why this isn't necessarily a 'reset' as in browsers, all `<a>` have a default of blue and are underlined, in email the behaviour is the same, but styling links in email clients needs `!important` or specific CSS targeting. 
 
 Also email clients auto-link telephone, dates, addresses, email addresses and urls - which need targeting below to over write email client styles.  
 
