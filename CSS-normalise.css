@@ -65,7 +65,13 @@ a[x-apple-data-detectors=true]{
 	color: inherit !important;
 	text-decoration: inherit !important;
 }
-      	
+
+/* normalise link attributes in Apple Mail / iOS Mail apps for the date calendar event- to match the parent element */
+[x-apple-data-detectors-type="calendar-event"] {
+      color: #inherit !important;
+      -webkit-text-decoration-color: #inherit !important;
+}
+
 /* normalise link attributes in Gmail - to match the parent element. NOTE: Need to add class="body" to the body element and a DOCTYPE must be present. */
 
 u + .body a {
