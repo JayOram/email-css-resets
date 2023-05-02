@@ -31,13 +31,13 @@ span.MsoHyperlink {
 span.MsoHyperlinkFollowed {
   color: inherit !important;
   mso-style-priority: 99 !important;
-      }
+  }
 
 #root [x-apple-data-detectors=true],
 a[x-apple-data-detectors=true]{
-	color: inherit !important;
-	text-decoration: inherit !important;
-}
+  color: inherit !important;
+  text-decoration: inherit !important;
+  }
 
 u + .body a {
   color: inherit;
@@ -48,10 +48,14 @@ u + .body a {
   }
 
 .body {
-   word-wrap: normal;
-   word-spacing:normal;
+  word-wrap: normal;
+  word-spacing:normal;
   }
 
- div[style*="margin: 16px 0"] {
+div[style*="margin: 16px 0"] {
   margin: 0!important;
+  }
+
+#message *{
+  all:revert
   }
