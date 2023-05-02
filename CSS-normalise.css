@@ -94,3 +94,10 @@ This doesn't fix GANGA - so may need to be added inline -
  div[style*="margin: 16px 0"] {
   margin: 0!important;
   }
+
+/* revert all styles doe LaPoste webmail */
+
+#message *{
+  all:revert
+}
+
