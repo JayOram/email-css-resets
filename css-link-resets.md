@@ -132,3 +132,28 @@ a {
 </style>
 <![endif]--> 
 ```
+
+*Outlook Webmail*
+
+The below needs the `<body>` element to have the `class="body"` to ensure the CSS only targets Outlook webmail, this is done by prefixing the class with `x_` - this doesn't affect attribute selectors.
+
+```
+[class=x_body] [role=link] {
+  border: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+```
+
+Thanks to [Mark Robbins](https://github.com/M-J-Robbins) and [Hussein Al Hammad](https://github.com/husseinalhammad) for finding and working on a solution. More information in [issue #11](https://github.com/JayOram/email-css-resets/issues/11).
+
+
+*Outlook on mac*
+
+Submitted by [Mark Robbins](https://github.com/M-J-Robbins) - more information in [issue #10](https://github.com/JayOram/email-css-resets/issues/10).
+
+```
+#WEBEXT{
+  all:revert !important;
+}
+```
