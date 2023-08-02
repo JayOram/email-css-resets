@@ -101,7 +101,7 @@ This doesn't fix GANGA - so may need to be added inline -
   margin: 0!important;
   }
 
-/* revert all styles doe LaPoste webmail */
+/* revert all styles for LaPoste webmail */
 
 #message *{
   all:revert
