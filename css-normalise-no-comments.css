@@ -59,3 +59,9 @@ div[style*="margin: 16px 0"] {
 #message *{
   all:revert
   }
+
+[data-markjs]{
+  color:inherit;
+  padding:0;
+  background:none;
+}
