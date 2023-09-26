@@ -107,3 +107,11 @@ This doesn't fix GANGA - so may need to be added inline -
   all:revert
 }
 
+/* outlook.com 'celebrations' highlight removal - this doesn't stop the animation, just the highlight and color */
+
+[data-markjs]{
+  color:inherit;
+  padding:0;
+  background:none;
+}
+
