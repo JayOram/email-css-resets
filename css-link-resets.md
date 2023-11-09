@@ -94,6 +94,16 @@ Note: if you include !important after the below it will remove all styling in th
     }
 ```
 
+*Outlook App Android - Auto generated links*
+
+The class `.ms-outlook-linkify` is added to auto generated links, such as addresses. This makes the link inherit the color you have specified.
+
+```
+.ms-outlook-linkify{
+  color: inherit !important;
+}	
+```
+
 *Outlook App iOS*
 
 This one is complicated! To overide the specificity for the 'blue' link styling. You need to include two #IDs:
