@@ -167,3 +167,12 @@ Submitted by [Mark Robbins](https://github.com/M-J-Robbins) - more information i
   all:revert !important;
 }
 ```
+
+Additionally Outlook for Mac is forcing a blue link for `mailto:` links - More information in the [email-bugs repo](https://github.com/hteumeuleu/email-bugs/issues/107) - in order to fix it, you need to nest another element inside your link to style the color:
+
+```
+<a href="mailto:test@example.com" style="color:black;">
+<span style="color:black;">mailto link</span>
+</a>
+```
+
