@@ -36,7 +36,7 @@ The below meta tag is used to disable apple mail reformatting HTML code
 The next fix is for a number of Micorsoft Outlook specific anomalies and some other email client fixes - this is placed inside the body of the email:
 
 ```
-<span style="display: none;"><!-- [if mso]>
+<span style="display: none;">
 <xml>
 <o:OfficeDocumentSettings>
 <o:PixelsPerInch>96</o:PixelsPerInch>
@@ -45,14 +45,14 @@ The next fix is for a number of Micorsoft Outlook specific anomalies and some ot
 <w:DontUseAdvancedTypographyReadingMail/>
 </w:WordDocument>
 </xml>
-<! [endif]--></span>
+</span>
 ```
 
 
 Wait - shouldn't this be in the `<head>` of the email? The issue we are seeing is that Gmail App Non Gmail Account (GANGA) 96 is being printed, even if it is in the head. Therefore moving it to the `<body>` allows us to use `<span style="display: none;">...</span>` to hide the 96 from all other email clients except Microsoft Outlook.
 
 
-Next the mso-comments -  `<!-- [if mso]>...<! [endif]-->` which includes a space to keep the mso comments from showing in T-online.de - more details on this blog [MSO Comments](https://lessonsinemail.com/articles/mso-comments#t-online).
+No need for mso comments as the code only works in Outlook and the `display: none` hides it from all other email clients.
 
 
 The below section is a fix for Outlook 120 dpi when using VML. You should check out this amazing article from Courtney Fantinato on [Correcting Outlook DPI Scaling Issues](https://www.courtneyfantinato.com/correcting-outlook-dpi-scaling-issues/).
