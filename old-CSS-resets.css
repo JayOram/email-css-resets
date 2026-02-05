@@ -93,3 +93,9 @@ u ~ div img + div {display: none;}
   font-weight: inherit !important;
   line-height: inherit !important;
 }
+
+/* centre email on Android 4.4 - margin reset */
+
+ div[style*="margin: 16px 0"] {
+  margin: 0!important;
+  }
