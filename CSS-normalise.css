@@ -95,12 +95,6 @@ This doesn't fix GANGA - so may need to be added inline -
    word-spacing:normal;
   }
 
-/* centre email on Android 4.4 - margin reset */
-
- div[style*="margin: 16px 0"] {
-  margin: 0!important;
-  }
-
 /* revert all styles for LaPoste webmail */
 
 #message *{
