@@ -6,6 +6,9 @@ A lot of CSS 'resets' deal with stopping email clients default link styling of b
 
 All of the CSS below will reset **ALL** links in an HTML document. So may not be the best solution if you want granular control of each link, which can be handled with class/id specifically or inline styles. Gmail App and Non-Gmail Accounts (GANGA) is the last email client still needing inline styles as the `<head>` is ignored.
 
+## Auto linking
+As well as email client formatting all links, they may add links to content it *assumes* should be linked, such as phone numbers, websites or addresses. This [article](https://customer.io/learn/message-composing/email-auto-linking-fixes) from [Mark Robbins](https://github.com/M-J-Robbins) has a lot of great info on how you can fix this particular quirk of email clients. 
+
 ## Code
 *Generic reset*
 
