@@ -14,9 +14,7 @@ The below meta tag helps set up the viewport for your email.
 
 `width=device-width` sets the width of th viewport to the width of the device.
 
-`initial-scale=1` sets the initial 'zoom' value of the screen to 1 or 100%
-
-```<meta name="viewport" content="width=device-width, initial-scale=1" />```
+```<meta name="viewport" content="width=device-width" />```
    
 
 The below meta tag sets the format detection to ignore, addresses, email, date and url - to hopefully ask the email client/browser to not adjust the format.
